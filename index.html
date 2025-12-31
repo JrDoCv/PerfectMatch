@@ -1,64 +1,78 @@
-
-Html<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Responsividade -->
-    <meta name="description" content="Meu primeiro site em HTML e CSS">
-    <title>Meu Primeiro Site</title>
-    <style>
-        /* Estilos globais */
-        body {
-            font-family: Arial, sans-serif;
-            background-color: #f0f0f0;
-            text-align: center;
-            margin: 0;
-            padding: 0;
-        }
+<meta charset="UTF-8">
+<title>Par Perfeito</title>
 
-        header {
-            background-color: #4CAF50;
-            color: white;
-            padding: 20px;
-        }
+<style>
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #fff0f5;
+    color: #333;
+}
 
-        main {
-            padding: 20px;
-            max-width: 800px;
-            margin: auto;
-        }
+/* Cabeçalho */
+header {
+    background-color: #ff69b4;
+    color: white;
+    padding: 20px;
+    text-align: center;
+}
 
-        footer {
-            background-color: #333;
-            color: white;
-            padding: 10px;
-            position: fixed;
-            bottom: 0;
-            width: 100%;
-            font-size: 0.9em;
-        }
+/* Menu */
+nav {
+    display: flex;
+    justify-content: center;
+    background-color: #ffc0cb;
+}
 
-        /* Ajuste para evitar que o conteúdo fique escondido atrás do rodapé fixo */
-        body {
-            padding-bottom: 50px;
-        }
-    </style>
-</head>
-<body>
-    <header>
-        <h1>Bem-vindo ao meu site!</h1>
-        <p> fala galera do Comando Vermelho 😄</p>
-    </header>
+nav button {
+    background: none;
+    border: none;
+    padding: 15px 25px;
+    cursor: pointer;
+    font-size: 16px;
+    color: #800040;
+}
 
-    <main>
-        <h2>Sobre mim</h2>
-        <p> meu saco de paraquedas.</p>
-    </main>
+nav button:hover {
+    background-color: #ffb6c1;
+}
 
-    <footer>
-        <p>© 2025 - Meu Site</p>
-    </footer>
-</body>
-</html>
+/* Conteúdo */
+section {
+    display: none;
+    padding: 30px;
+    text-align: center;
+}
 
+section.active {
+    display: block;
+}
 
+/* Formulário */
+input, select {
+    padding: 10px;
+    margin: 10px;
+    width: 220px;
+    border: 1px solid #ff69b4;
+    border-radius: 5px;
+}
+
+button.encontrar {
+    background-color: #ff69b4;
+    color: white;
+    border: none;
+    padding: 12px 25px;
+    border-radius: 20px;
+    cursor: pointer;
+}
+
+button.encontrar:hover {
+    background-color: #ff1493;
+}
+
+/* Rodapé */
+footer {
+    background-color: #ff
