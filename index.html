@@ -1,78 +1,86 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-<meta charset="UTF-8">
-<title>Par Perfeito</title>
+    <meta charset="UTF-8">
+    <title>Site de Relacionamento</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+            background: linear-gradient(to bottom, #fa8072, #ffffff);
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
 
-<style>
-body {
-    margin: 0;
-    font-family: Arial, sans-serif;
-    background-color: #fff0f5;
-    color: #333;
-}
+        .container {
+            background-color: white;
+            padding: 30px;
+            border-radius: 12px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+            width: 300px;
+            text-align: center;
+        }
 
-/* Cabeçalho */
-header {
-    background-color: #ff69b4;
-    color: white;
-    padding: 20px;
-    text-align: center;
-}
+        h1 {
+            color: #fa8072;
+        }
 
-/* Menu */
-nav {
-    display: flex;
-    justify-content: center;
-    background-color: #ffc0cb;
-}
+        input {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+            border-radius: 6px;
+            border: 1px solid #ccc;
+        }
 
-nav button {
-    background: none;
-    border: none;
-    padding: 15px 25px;
-    cursor: pointer;
-    font-size: 16px;
-    color: #800040;
-}
+        button {
+            background-color: #fa8072;
+            color: white;
+            border: none;
+            padding: 10px;
+            width: 100%;
+            border-radius: 6px;
+            cursor: pointer;
+            font-size: 16px;
+        }
 
-nav button:hover {
-    background-color: #ffb6c1;
-}
+        button:hover {
+            background-color: #f26f63;
+        }
 
-/* Conteúdo */
-section {
-    display: none;
-    padding: 30px;
-    text-align: center;
-}
+        .success {
+            display: none;
+            color: green;
+            margin-top: 15px;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
 
-section.active {
-    display: block;
-}
+    <div class="container">
+        <h1>Cadastro</h1>
 
-/* Formulário */
-input, select {
-    padding: 10px;
-    margin: 10px;
-    width: 220px;
-    border: 1px solid #ff69b4;
-    border-radius: 5px;
-}
+        <form onsubmit="mostrarMensagem(event)">
+            <input type="text" placeholder="Digite seu nome" required>
+            <input type="number" placeholder="Digite sua idade" required>
+            <button type="submit">Registrar</button>
+        </form>
 
-button.encontrar {
-    background-color: #ff69b4;
-    color: white;
-    border: none;
-    padding: 12px 25px;
-    border-radius: 20px;
-    cursor: pointer;
-}
+        <div class="success" id="mensagem">
+            ✅ Registro realizado com sucesso!
+        </div>
+    </div>
 
-button.encontrar:hover {
-    background-color: #ff1493;
-}
+    <script>
+        function mostrarMensagem(event) {
+            event.preventDefault();
+            document.getElementById("mensagem").style.display = "block";
+        }
+    </script>
 
-/* Rodapé */
-footer {
-    background-color: #ff
+</body>
+</html>
